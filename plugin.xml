@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.azati.push_status2"
+        version="0.0.8">
+
+  <name>IOS Push notifications availability status plugin</name>
+  <description>This plugin help you to check if push notifications is disabled in phone settings</description>
+  <author>Azati</author>
+
+  <license>MIT</license>
+  
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <js-module src="www/push_status2.js" name="push_status2">
+    <clobbers target="navigator.push_status2" />
+  </js-module>
+
+  <platform name="ios">    
+    <config-file target="config.xml" parent="/*">
+      <feature name="PushStatus">
+        <param name="ios-package" value="PushStatus" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/PushStatus.h"/>
+    <source-file src="src/ios/PushStatus.m"/>
+  </platform>
+  
+  <platform name="android">    
+    <config-file target="config.xml" parent="/*">
+      <feature name="PushStatus">
+        <param name="android-package" value="PushStatus" />
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/PushStatus.java"/>
+  </platform>
+
+</plugin>

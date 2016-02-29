@@ -1,0 +1,32 @@
+{
+    "name": "push_status2",
+    "description": "This plugin help you to check if push notifications is disabled in phone settings",
+	"author": "Azati",
+    "version": "0.0.8",
+    "homepage": "",
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": {
+        "url": ""
+    },
+    "cordova": {
+        "id": "com.azati.push_status2",
+        "platforms": [
+            "ios"
+        ]
+    },
+    "keywords": [
+        "ecosystem:cordova",
+        "ecosystem:phonegap"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.4.0"
+        }
+    ],
+    "author": "Azati",
+    "license": "MIT"
+}
